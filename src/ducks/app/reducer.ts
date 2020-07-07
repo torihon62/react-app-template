@@ -4,15 +4,15 @@ import { isType } from 'typescript-fsa';
 import actions from './actions';
 
 const initialState: AppState = {
-	hoge: 'fuga',
+  hoge: 'fuga',
 };
 
 export function appReducer(state = initialState, action: Action): AppState {
-	if (isType(action, actions.init)) {
-		return {
-			...state,
-			hoge: 'fugafuga',
-		};
-	}
-	return state;
+  if (isType(action, actions.init)) {
+    return {
+      ...state,
+      hoge: 'fugafuga',
+    };
+  }
+  return state;
 }
